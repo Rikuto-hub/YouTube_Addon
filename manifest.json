@@ -19,5 +19,5 @@
     "48": "images/logo.png",
     "128": "images/logo.png"
   },
-  "permissions": ["declarativeContent"]
+  "permissions": ["declarativeContent", "tabs"]
 }
