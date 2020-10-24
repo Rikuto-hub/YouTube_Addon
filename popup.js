@@ -22,5 +22,17 @@ document.getElementById('movie_release').addEventListener('click', function() {
 })
 
 document.getElementById('scroll_button').addEventListener('click', function() {
-  pushMessageToContent('scroll') 
+  pushMessageToContent('scroll')
+  const scroll = document.getElementById('scroll_button');
+  const scrollRelease = document.getElementById('scroll_release');
+  scroll.classList.add('hidden');
+  scrollRelease.classList.remove('hidden');
+})
+
+document.getElementById('scroll_release').addEventListener('click', function() {
+  pushMessageToContent('scrollRelease')
+  const scroll = document.getElementById('scroll_button');
+  const scrollRelease = document.getElementById('scroll_release');
+  scroll.classList.remove('hidden');
+  scrollRelease.classList.add('hidden');
 })
