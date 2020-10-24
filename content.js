@@ -10,6 +10,16 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendRespose) {
   }
   
   if (message === 'scroll') {
-    
+    var speed = 5; 
+    var interval = 50; 
+    var scrollTop = document.body.scrollTop;
+    system = setInterval(function() {
+        var scroll = scrollTop + speed;
+        window.scrollBy(0, scroll)
+    },interval);
+  }
+
+  if (message === 'scrollRelease') {
+    clearInterval(system);
   }
 })
