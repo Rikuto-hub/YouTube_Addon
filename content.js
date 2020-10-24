@@ -22,4 +22,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendRespose) {
   if (message === 'scrollRelease') {
     clearInterval(system);
   }
+
+  if (message.type === 'register') {
+    document.getElementById('owner-sub-count').innerHTML =　'チャンネル登録者数　'　+ message.count + '人'
+  }
 })

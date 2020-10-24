@@ -36,3 +36,12 @@ document.getElementById('scroll_release').addEventListener('click', function() {
   scroll.classList.remove('hidden');
   scrollRelease.classList.add('hidden');
 })
+
+document.getElementById('register_button').addEventListener('click', function() {
+  const getCount = function () {
+    const input = document.getElementById('count')
+    return input.value
+  }
+  const count = getCount()
+  pushMessageToContent({type: 'register', count: count})
+})
